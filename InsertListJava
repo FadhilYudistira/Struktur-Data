@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package insertlisturut;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+/**
+ *
+ * @author ACER
+ */
+public class InsertListUrut {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+List daftarAngka = new ArrayList();
+daftarAngka.add(2);
+daftarAngka.add(4);
+daftarAngka.add(6);
+daftarAngka.add(8);
+daftarAngka.add(1);
+daftarAngka.add(3);
+daftarAngka.add(5);
+daftarAngka.add(7);
+daftarAngka.add(9);
+
+System.out.println("Sebelum Diurutkan");
+System.out.println(daftarAngka);
+
+Collections.sort(daftarAngka);
+System.out.println("Setelah Diurutkan");
+System.out.println(daftarAngka);
+    }
+    
+}
