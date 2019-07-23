@@ -1,0 +1,11 @@
+x = [2, 4, 6]
+y = [1, 3, 5]
+
+xTotal = sum (x)
+xTotal = sum (y)
+jumlah = xTotal + xTotal
+print("Jumlah Nilai Kedua Array")
+print(jumlah)
+
+print("Menggabungkan Kedua Data Array")
+print(x + y)
