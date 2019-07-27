@@ -12,7 +12,7 @@ public class Node {
         System.out.print("("+data+")");
     }
 }
-package doublelinkedlist;
+
 public class DoubleLinkedList{
     Node first;
     Node last;
@@ -120,7 +120,7 @@ return true;
 }
     
     
-package doublelinkedlist;
+
 public class APP{
     public static void main (String[] args){
         DoubleLinkedList list = new DoubleLinkedList();
