@@ -1,0 +1,87 @@
+import java.util.Scanner;
+public class Kalendar {
+    public static void main (String [] args){
+
+        int hari = 0, tanggal, bulan, tahun;
+        boolean Tanggal, Bulan, Valid;
+        String hasil,namaBulan = null;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukan Tanggal=");
+        tanggal = input.nextInt();
+        System.out.println("Masukan Bulan=");
+        bulan = input.nextInt();
+        System.out.println("Masukan Tahun=");
+        tahun = input.nextInt();
+        
+        if(bulan == 1){
+            hari = 31;
+            namaBulan = "Januari";
+        }
+        else if(bulan == 2){
+            if((tahun %4==0&&tahun%100!=0)|| tahun %4 == 0){
+                hari = 29;
+                namaBulan= "Februari";
+            }
+            else{
+                hari = 28;
+                namaBulan = "Februari";
+            }
+        }
+        else if (bulan==3){
+            hari = 31;
+            namaBulan ="Maret";
+        }
+        else if (bulan==4){
+            hari = 30;
+            namaBulan ="April";
+        }
+        else if (bulan==5){
+            hari = 31;
+            namaBulan ="Mei";
+        }
+        else if (bulan==6){
+            hari = 30;
+            namaBulan ="Juni";
+        }
+        else if (bulan==7){
+            hari = 31;
+            namaBulan ="Juli";
+        }
+        else if (bulan==8){
+            hari = 31;
+            namaBulan ="Agustus";
+        }
+        else if (bulan==9){
+            hari = 30;
+            namaBulan ="September";
+        }
+        else if (bulan==10){
+            hari = 31;
+            namaBulan ="Oktober";
+        }
+        else if (bulan==11){
+            hari = 30;
+            namaBulan ="November";
+        }
+        else if (bulan==12){
+            hari = 31;
+            namaBulan ="Desember";
+        }
+        else {
+            hari =-1;
+            namaBulan = Integer.toString(bulan);
+        }
+        Tanggal = tanggal >= 1 && tanggal <= hari;
+        Bulan = bulan >=1 && bulan <=12;
+        Valid = Tanggal && Bulan;
+        
+        if (Valid){
+            hasil = " Merupakan Tanggal Yang Valid";
+        }
+        else {
+            hasil = " Merupakan Tanggal Yang Tidak Valid";
+        }
+        
+        System.out.println ("\n"+tanggal+""+namaBulan+""+tahun+hasil);
+    }
+}
