@@ -1,0 +1,27 @@
+import java.util.Arrays;
+public class Array {
+    public static void main (String [] args){
+        int [] x = {2,4,6};
+        int [] y = {1,3,20};
+        int sumX = 0;
+        int sumY = 0;
+        int jumlah;
+        
+        for (int num:x){
+            sumX = sumX+num;
+        }
+        for(int num:y){
+            sumY = sumY+num;
+        }
+        jumlah = sumX + sumY;
+        
+        System.out.println("Jumlah Nilai Kedua Array=" +jumlah);
+        
+        int [] xy = new int [x.length+y.length];
+        System.arraycopy(x,0,xy,0,y.length);
+        System.arraycopy(y,0,xy,x.length,y.length);
+        
+        System.out.println("Menggabungkan Kedua Array");
+        System.out.println(Arrays.toString(xy));
+    }
+}
